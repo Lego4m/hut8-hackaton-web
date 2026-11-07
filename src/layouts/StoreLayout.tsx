@@ -39,7 +39,11 @@ export function StoreLayout() {
     <div className="flex min-h-svh flex-col bg-white text-ink">
       <header className="border-b border-brand-100 bg-brand-50">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-4">
-          <NavLink to="/" className="text-xl font-bold text-brand-600">🍬 Doces da Lurdes</NavLink>
+          <NavLink to="/" className="flex items-center gap-1 text-xl font-bold text-brand-600">
+            {/* The SVG has built-in shadow padding, so pull it into the header padding. */}
+            <img src="/logo.svg" alt="" width={56} height={56} className="-my-3 -ml-2 h-14 w-14" />
+            Doces da Lurdes
+          </NavLink>
           <nav className="flex flex-wrap items-center gap-4 text-sm">
             <NavLink to="/doces" className={navClass}>Doces</NavLink>
             <AccountMenu />

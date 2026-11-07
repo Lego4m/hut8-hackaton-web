@@ -20,10 +20,13 @@ export function AdminLayout() {
   return (
     <div className="flex min-h-svh flex-col bg-white text-ink md:flex-row">
       <aside className="flex shrink-0 flex-col gap-6 border-b border-brand-100 bg-brand-50 p-4 md:sticky md:top-0 md:h-svh md:w-60 md:border-r md:border-b-0">
-        <div>
-          <div className="text-lg font-bold text-brand-600">🍬 Doces da Lurdes</div>
-          <div className="text-xs text-muted">Painel administrativo</div>
-        </div>
+        <NavLink to="/admin" end className="-ml-2 flex items-center gap-1">
+          <img src="/logo.svg" alt="" width={56} height={56} className="-my-2 h-14 w-14 shrink-0" />
+          <span>
+            <span className="block text-lg font-bold leading-tight text-brand-600">Doces da Lurdes</span>
+            <span className="block text-xs text-muted">Painel administrativo</span>
+          </span>
+        </NavLink>
 
         <nav aria-label="Menu administrativo" className="flex gap-1 overflow-x-auto md:flex-col">
           {menu.map((item) => (
